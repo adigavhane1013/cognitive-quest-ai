@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Brain, Menu, X, Home, BarChart3, Gamepad2, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,27 +27,27 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a
-              href="#dashboard"
+            <Link
+              to="/"
               className="flex items-center space-x-2 px-4 py-2 rounded-lg text-foreground hover:bg-glass transition-all duration-300 group"
             >
               <Home className="h-5 w-5 group-hover:scale-110 transition-transform" />
               <span className="font-medium">Dashboard</span>
-            </a>
-            <a
-              href="#games"
+            </Link>
+            <Link
+              to="/games"
               className="flex items-center space-x-2 px-4 py-2 rounded-lg text-foreground hover:bg-glass transition-all duration-300 group"
             >
               <Gamepad2 className="h-5 w-5 group-hover:scale-110 transition-transform" />
               <span className="font-medium">Games</span>
-            </a>
-            <a
-              href="#progress"
+            </Link>
+            <Link
+              to="/#progress"
               className="flex items-center space-x-2 px-4 py-2 rounded-lg text-foreground hover:bg-glass transition-all duration-300 group"
             >
               <BarChart3 className="h-5 w-5 group-hover:scale-110 transition-transform" />
               <span className="font-medium">Progress</span>
-            </a>
+            </Link>
             <div className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-glass cursor-pointer hover:bg-glass-border transition-all duration-300">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-success to-accent flex items-center justify-center">
                 <User className="h-4 w-4 text-white" />
@@ -69,30 +70,30 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden mt-6 pt-6 border-t border-glass-border space-y-4 fade-in-up">
-            <a
-              href="#dashboard"
+            <Link
+              to="/"
               className="flex items-center space-x-3 px-4 py-3 rounded-lg text-foreground hover:bg-glass transition-all duration-300"
               onClick={toggleMenu}
             >
               <Home className="h-5 w-5" />
               <span className="font-medium">Dashboard</span>
-            </a>
-            <a
-              href="#games"
+            </Link>
+            <Link
+              to="/games"
               className="flex items-center space-x-3 px-4 py-3 rounded-lg text-foreground hover:bg-glass transition-all duration-300"
               onClick={toggleMenu}
             >
               <Gamepad2 className="h-5 w-5" />
               <span className="font-medium">Games</span>
-            </a>
-            <a
-              href="#progress"
+            </Link>
+            <Link
+              to="/#progress"
               className="flex items-center space-x-3 px-4 py-3 rounded-lg text-foreground hover:bg-glass transition-all duration-300"
               onClick={toggleMenu}
             >
               <BarChart3 className="h-5 w-5" />
               <span className="font-medium">Progress</span>
-            </a>
+            </Link>
             <div className="flex items-center space-x-3 px-4 py-3 rounded-lg bg-glass">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-success to-accent flex items-center justify-center">
                 <User className="h-4 w-4 text-white" />

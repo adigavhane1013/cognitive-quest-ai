@@ -3,6 +3,7 @@ import { Brain, Eye, Zap, Play, Star, Clock, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 const GamesSection = () => {
   const [selectedGame, setSelectedGame] = useState<string | null>(null);
@@ -48,11 +49,12 @@ const GamesSection = () => {
       status: "Great progress!"
     }
   ];
+  const navigate = useNavigate();
 
   const handlePlayGame = (gameId: string) => {
     setSelectedGame(gameId);
-    // Here you would navigate to the actual game
-    console.log(`Starting game: ${gameId}`);
+    navigate(`/games/${gameId}`);
+    console.info(`Starting game: ${gameId}`);
   };
 
   return (

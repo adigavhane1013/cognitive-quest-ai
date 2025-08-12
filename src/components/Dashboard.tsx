@@ -48,7 +48,7 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Progress Card */}
           <div className="lg:col-span-2">
-            <Card className="glass-card border-0 p-6 fade-in-up">
+            <Card id="progress" className="glass-card border-0 p-6 fade-in-up">
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center space-x-2 text-2xl">
                   <TrendingUp className="h-6 w-6 text-primary" />
