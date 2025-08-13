@@ -100,6 +100,45 @@ const GamesSection = () => {
       improvement: "+7%",
       features: ["Spatial Skills", "Visual Perception", "3D Thinking"],
       status: "Sharp improvement!"
+    },
+    {
+      id: "executive",
+      title: "Executive Function",
+      description: "Enhance planning, decision-making, and cognitive flexibility",
+      icon: Target,
+      color: "from-indigo-500 to-indigo-300",
+      difficulty: "Adaptive",
+      duration: "5-8 min",
+      lastScore: 89,
+      improvement: "+9%",
+      features: ["Planning", "Decision Making", "Cognitive Control"],
+      status: "Excellent focus!"
+    },
+    {
+      id: "spatial",
+      title: "Spatial Navigation",
+      description: "Train spatial memory and 3D navigation skills",
+      icon: Brain,
+      color: "from-cyan-500 to-cyan-300",
+      difficulty: "Progressive",
+      duration: "6-10 min",
+      lastScore: 81,
+      improvement: "+11%",
+      features: ["3D Navigation", "Spatial Memory", "Route Planning"],
+      status: "Navigation mastery!"
+    },
+    {
+      id: "processing",
+      title: "Processing Speed",
+      description: "Boost cognitive processing speed with symbol matching",
+      icon: Zap,
+      color: "from-rose-500 to-rose-300",
+      difficulty: "Scaling",
+      duration: "3-6 min",
+      lastScore: 92,
+      improvement: "+13%",
+      features: ["Symbol Matching", "Quick Processing", "Mental Speed"],
+      status: "Lightning fast!"
     }
   ];
   const navigate = useNavigate();

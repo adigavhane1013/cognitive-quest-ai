@@ -13,6 +13,9 @@ import PatternGame from "./pages/games/PatternGame";
 import WordGame from "./pages/games/WordGame";
 import MathGame from "./pages/games/MathGame";
 import VisualGame from "./pages/games/VisualGame";
+import ExecutiveGame from "./pages/games/ExecutiveGame";
+import SpatialGame from "./pages/games/SpatialGame";
+import ProcessingGame from "./pages/games/ProcessingGame";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +36,9 @@ const App = () => (
           <Route path="/games/word" element={<WordGame />} />
           <Route path="/games/math" element={<MathGame />} />
           <Route path="/games/visual" element={<VisualGame />} />
+          <Route path="/games/executive" element={<ExecutiveGame />} />
+          <Route path="/games/spatial" element={<SpatialGame />} />
+          <Route path="/games/processing" element={<ProcessingGame />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
