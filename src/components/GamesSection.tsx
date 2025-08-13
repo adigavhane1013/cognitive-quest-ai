@@ -1,5 +1,6 @@
+
 import { useState } from "react";
-import { Brain, Eye, Zap, Play, Star, Clock, Target } from "lucide-react";
+import { Brain, Eye, Zap, Play, Star, Clock, Target, Puzzle, BookOpen, Calculator, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -47,6 +48,58 @@ const GamesSection = () => {
       improvement: "+12%",
       features: ["Quick Response", "Hand-Eye Coordination", "Processing Speed"],
       status: "Great progress!"
+    },
+    {
+      id: "pattern",
+      title: "Pattern Recognition",
+      description: "Develop logical thinking through sequence and pattern identification",
+      icon: Puzzle,
+      color: "from-accent to-accent-light",
+      difficulty: "Progressive",
+      duration: "4-8 min",
+      lastScore: 78,
+      improvement: "+15%",
+      features: ["Sequence Logic", "Pattern Analysis", "Critical Thinking"],
+      status: "Trending up!"
+    },
+    {
+      id: "word",
+      title: "Word Memory",
+      description: "Strengthen verbal memory and language processing abilities",
+      icon: BookOpen,
+      color: "from-purple-500 to-purple-300",
+      difficulty: "Adaptive",
+      duration: "3-7 min",
+      lastScore: 91,
+      improvement: "+6%",
+      features: ["Verbal Memory", "Language Skills", "Recall Training"],
+      status: "Excellent retention!"
+    },
+    {
+      id: "math",
+      title: "Math Challenge",
+      description: "Exercise working memory and numerical processing skills",
+      icon: Calculator,
+      color: "from-orange-500 to-orange-300",
+      difficulty: "Scaling",
+      duration: "3-6 min",
+      lastScore: 84,
+      improvement: "+10%",
+      features: ["Mental Math", "Working Memory", "Problem Solving"],
+      status: "Building confidence!"
+    },
+    {
+      id: "visual",
+      title: "Visual Processing",
+      description: "Improve spatial awareness and visual-perceptual skills",
+      icon: Layers,
+      color: "from-teal-500 to-teal-300",
+      difficulty: "Dynamic",
+      duration: "4-9 min",
+      lastScore: 86,
+      improvement: "+7%",
+      features: ["Spatial Skills", "Visual Perception", "3D Thinking"],
+      status: "Sharp improvement!"
     }
   ];
   const navigate = useNavigate();
@@ -96,14 +149,14 @@ const GamesSection = () => {
         </div>
 
         {/* Games Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {games.map((game, index) => (
             <Card 
               key={game.id} 
               className={`glass-card border-0 overflow-hidden scale-hover fade-in-up ${
                 selectedGame === game.id ? 'ring-2 ring-primary' : ''
               }`}
-              style={{ animationDelay: `${0.4 + index * 0.2}s` }}
+              style={{ animationDelay: `${0.4 + index * 0.1}s` }}
             >
               <CardHeader className="pb-4">
                 <div className="flex items-start justify-between">
@@ -186,13 +239,13 @@ const GamesSection = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Badge variant="outline" className="bg-glass/30 border-glass-border py-2 px-4">
-                🧩 Pattern Recognition
+                🧩 Strategy Games
               </Badge>
               <Badge variant="outline" className="bg-glass/30 border-glass-border py-2 px-4">
-                🔤 Word Memory
+                🎵 Audio Memory
               </Badge>
               <Badge variant="outline" className="bg-glass/30 border-glass-border py-2 px-4">
-                🎯 Spatial Awareness
+                🎯 Executive Function
               </Badge>
             </div>
           </div>
